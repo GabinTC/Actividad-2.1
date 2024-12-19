@@ -1,0 +1,112 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 50%;
+    grid-template-rows: 100%;
+}
+
+form {
+
+    background-color: #D9D9D9;
+    border-radius: 35px;
+    height: fit-content; 
+    padding-bottom: 5px;
+
+    & .formulario-sesion {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        padding: 4%;
+        gap: 6%;
+
+        & .datos-formulario {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            height: 100%;
+
+            & p {
+                color: #FF9F47;
+                font-size: 16px;
+            }
+
+            & a {
+                align-self: center;
+                color: white;
+                padding: 10px;
+                background-color: #97E6FF;
+                border-radius: 15px;
+            }
+
+            & input {
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                border-radius: 50px;
+                background-color: #CEA7FF;
+                color: white;
+
+                &:focus {
+                    outline: transparent;
+                }
+            }
+
+            & button {
+                background-color: transparent;
+                border: transparent;
+                color: white;
+                font-size: 16px;
+                padding: 10px;
+                background-color: #97E6FF;
+                border-radius: 15px;
+                width: min-content;
+                align-self: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    & .botones-formulario {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 50px;
+
+        & p {
+            color: white;
+        }
+
+        & a {
+            background-color: #97E6FF;
+            border-radius: 15px;
+            padding: 10px;
+            color: white;
+            align-self: flex-end;
+        }
+
+        & button {
+            background-color: #97E6FF;
+            border-radius: 15px;
+            padding: 10px;
+            color: white;
+            border: none;
+            height: min-content;
+            font-size: 16px;
+            align-self: flex-end;
+        }
+    }
+}
+
+@media screen and (max-width: 719px) {
+
+    .grid-container {
+        grid-template-columns: 100%;
+        grid-template-rows: 90% 10%;
+        margin-right: 5%;
+        margin-left: 5%;
+        gap: 10px;
+    }
+
+}
